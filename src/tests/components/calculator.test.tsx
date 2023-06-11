@@ -26,4 +26,17 @@ describe('InsuranceCalculator', () => {
     userEvent.click(dropdownItem)
     expect(await waitFor(() => screen.getByText('Koniec poistenia'))).toBeInTheDocument()
   })
+
+  test('doesnt render Koniec poistenie field after selecting celorocne poistenie option', async () => {
+    render(<InsuranceCalculator />)
+
+    const dropdownButton = screen.getByRole('button', { name: /variant poistenia ​/i })
+    userEvent.click(dropdownButton)
+
+    const dropdownItem = await screen.findByTestId(/celorocne/i)
+    userEvent.click(dropdownItem)
+
+    var element = await waitFor(() => screen.queryByText('Koniec poistenia'))
+    expect(element).not.toBeInTheDocument()
+  })
 })

@@ -198,7 +198,9 @@ export const InsuranceCalculator: FC<InsuranceCalculatorProps> = () => {
                 <MenuItem value={VARIANT_KRATKODOBE.value} data-testid="kratkodob">
                   {VARIANT_KRATKODOBE.label}
                 </MenuItem>
-                <MenuItem value={VARIANT_CELOROCNE.value}>{VARIANT_CELOROCNE.label}</MenuItem>
+                <MenuItem value={VARIANT_CELOROCNE.value} data-testid="celorocne">
+                  {VARIANT_CELOROCNE.label}
+                </MenuItem>
               </Select>
             </FormControl>
           </Grid>
