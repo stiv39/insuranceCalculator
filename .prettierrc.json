@@ -1,0 +1,21 @@
+{
+    "singleQuote": true,
+    "semi": false,
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "printWidth": 120,
+    "bracketSameLine": false,
+    "bracketSpacing": true,
+    "eslintIntegration": true,
+    "overrides": [
+        {
+            "files": [
+                "*.js",
+                "*.jsx",
+                "*.ts",
+                "*.tsx",
+                "*.json"
+            ]
+        }
+    ]
+}
